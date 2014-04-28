@@ -218,7 +218,7 @@ class PhonetizerSpanish(Phonetizer):
                         lw[i+1] == 'ü'.decode('utf-8'):
                     phonemap += ['g', 'u']
                     next(it, None)
-                elif ch == 'g' and i+1 < len(lw) and lw[i+1] == 'u':
+                elif ch == 'g' and i+2 < len(lw) and lw[i+1] == 'u' and lw[i+2] in 'ei':
                     phonemap.append('g')
                     next(it, None)
                 elif ch == 'g' and i+1 < len(lw) and lw[i+1] in 'ei':
